@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #cdcad8;
+}
+.nav-nuevo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 20%;
+  background: black;
+  font-size: 20px;
+}
+.figure-img {
+  display: flex;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+.navbar-nav {
+  display: flex;
+  font-size: 20px;
+}
+.container-fluid .collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-item {
+  display: flex;
+  background-color: #d90368;
+  margin: 15px;
+  width: 115px;
+  height: 60px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.nav-item a {
+  color: #3956f5;
+  text-shadow: 3px 3px 9px rgb(43, 47, 70);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+.bar-home {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  background-image: url("../img/salon-fiesta.jpg");
+}
+main h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+}
+
+.bar-home i {
+  color: rgb(247, 247, 247);
+  font-size: 70px;
+  text-shadow: 5px 5px 5px black;
+}
+
+.col-4 {
+  display: flex;
+  flex-direction: row;
+}
+.checks-and-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px 0px 15px 35px;
+}
+.below-bar-home {
+  margin-left: 35px;
+  align-content: center;
+}
+.form-control {
+  width: 350px;
+}
+.search-bar {
+  margin-left: 350px;
+}
+.search-bar .col-4 label i {
+  font-size: 20px;
+  padding-left: 15px;
+}
+.cards-group-armado {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* .card-img-top{
+    width: 206px;
+    height: 137px;
+} */
+.price-and-button p {
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  background: #cdcad8;
+  max-height: 10vh;
+  justify-content: space-around;
+  height: 50px;
+  padding: 40px 20px;
+  align-items: center;
+}
+footer i {
+  font-size: 35px;
+}
+footer .bi-whatsapp {
+  color: rgb(6, 221, 6);
+}
+footer .bi-instagram {
+  color: #f703b2;
+}
+h2 {
+  font-size: 25px !important;
+  padding: 3px 20px 0px 20px;
+}
+/* desde aqui formulario */
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+}
+.formulario-contacto .form-label {
+  font-weight: 700;
+  font-size: 18px;
+}
+.formulario-contacto .btn {
+  display: flex;
+  width: 80px;
+  background: #a493e6;
+  border: none;
+}
+/* desde aqui details */
+
+.card-details {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  border: 1px solid black;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px 15px 20px;
+  border: 1px solid black;
+  margin-bottom: 42px;
+}
+.image-details .card-img-top {
+  width: 400px;
+  height: 300px;
+  border: 2px solid black;
+  box-shadow: 18px 10px 20px 8px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.card-body p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card-body p::first-letter {
+  font-weight: 700;
+  color: #d90368;
+}
+/* desde aqui el table */
+table {
+  border: 1px solid black;
+}
+.table-group-divider {
+  border: 1px solid black;
+}
+.table th {
+  border: 1px solid black;
+  width: 100%;
+}
+.table tr {
+  border: 1px solid black;
+}
+.title-table {
+  font-size: 20px;
+  font-weight: 700;
+}
+.empty {
+  color: #cdcad8;
+}
+.photo-nav {
+  width: 200px;
+}
+.f-contact {
+  margin-top: 35px;
+}
+/* desde aca las cards dinamicas */
+
+#divContainerEvents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 100px;
+}
+.card {
+  width: 25%;
+  padding: 20px;
+  margin: 25px;
+  justify-content: center;
+  box-shadow: 20px 12px 14px #4c5cac;
+}
+.card:hover {
+  box-shadow: 20px 12px 14px #d90368;
+  transition: 0.8s;
+}
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+/* desde 320px hasta 500px */
+@media screen and (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    flex-direction: column;
+    width: 100% !important;
+    margin: 5px;
+  }
+}
+
+/* desde 500px hasta 800px */
+@media screen and (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    flex-direction: column;
+    width: 80% !important;
+    margin: 15px;
+  }
+}
+/* desde 800px hasta 1200px */
+@media screen and (max-width: 1200px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    flex-direction: column;
+    width: 30%;
+    margin: 15px;
+  }
+}
