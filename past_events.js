@@ -50,7 +50,7 @@ async function bringData() {
     function doubleFilter(array) {
       let cardsChecked = filterArray(inputChecks, array);
       let finalFilter = filterSearch(inputText, cardsChecked);
-      cardsCreate(finalFilter, "div-container-events");
+      cardsCreate(finalFilter, "divContainerEvents");
     }
   }
   catch(error){
