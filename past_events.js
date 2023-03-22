@@ -19,7 +19,7 @@ async function bringData() {
     }
     
     // llamo a la función que me imprime las tarjetas
-    cardsCreate(before, "div-container-events");
+    cardsCreate(before, "divContainerEvents");
 
     // traigo los checkboxes
     checkboxCreate(dataEvents, "checks");
@@ -97,8 +97,8 @@ function cardsCreate(array, idContainer) {
                         <img class="h-75 img-cards" src="${event.image}" width="100%"></img>
                         <p class="new-div">Summary of the event: ${event.description}</p>
                         <div class="d-flex flex-column align-items-center"> 
-                        <p class="new-div">Event price: ${event.price} dollars</p>
-                        <a href="./details.html?_id=${event._id}" class="btn btn-outline-warning w-75 btn-details">Go to details ➔</a>
+                        <p class="new-div"><strong>Event price: USD ${event.price}</strong></p>
+                        <a href="./details.html?_id=${event._id}" class="btn btn-outline-info w-75 btn-details">SEE MORE  <i class="bi bi-emoji-smile-fill"></i></a>
                         </div>`;
     fragment.appendChild(div);
   }

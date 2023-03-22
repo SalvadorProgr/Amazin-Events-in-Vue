@@ -78,6 +78,17 @@ main h2 {
   justify-content: space-around;
   padding: 15px 0px 15px 35px;
 }
+#checks{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+.form-check{
+  display: flex;
+   justify-content: space-between;
+   margin: 20px;
+}
 .below-bar-home {
   margin-left: 35px;
   align-content: center;
@@ -96,10 +107,13 @@ main h2 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-/* .card-img-top{
-    width: 206px;
-    height: 137px;
-} */
+.new-div{
+  width: 30%;
+  margin: 1%;
+  border-style: outset;
+}
+
+
 .price-and-button p {
   font-weight: 700;
 }
