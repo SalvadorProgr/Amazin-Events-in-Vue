@@ -108,8 +108,8 @@ main h2 {
   justify-content: space-between;
 }
 .new-div{
-  width: 30%;
-  margin: 1%;
+  /* width: 30%; */
+  margin: 3%;
   border-style: outset;
 }
 
@@ -170,7 +170,7 @@ h2 {
   display: flex;
   justify-content: center;
   padding: 50px 20px 15px 20px;
-  border: 1px solid black;
+  align-items: center;
   margin-bottom: 42px;
 }
 .image-details .card-img-top {
@@ -182,11 +182,11 @@ h2 {
   padding: 5px;
 }
 
-.card-body p {
+.new-div p {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.card-body p::first-letter {
+.new-div p::first-letter {
   font-weight: 700;
   color: #d90368;
 }
@@ -231,7 +231,7 @@ table {
   padding: 20px;
   margin: 25px;
   justify-content: center;
-  box-shadow: 20px 12px 14px #4c5cac;
+  
 }
 .card:hover {
   box-shadow: 20px 12px 14px #d90368;
@@ -277,7 +277,7 @@ table {
   }
   .card {
     flex-direction: column;
-    width: 30%;
-    margin: 15px;
+    /* width: 30%; */
+    margin: 3%;
   }
 }

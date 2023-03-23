@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Events</title>
+
+    <link rel="shortcut icon" href="./assets/img/Logo_Amazing-Events.ico" type="image/x-icon">
+
+    <!-- Bootstrap v5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Icono bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+    <header class="nav-nuevo d-flex align-items-center justify-content-between">
+      <a href="./indexNuevo.html"
+        ><img
+          class="photo-nav"
+          src="./assets/img/Logo Amazing Events.png"
+          alt=""
+      /></a>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./uncomingEvents.html">UPCOMING EVENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pastEvents.html.html">PAST EVENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./stats.html">STATS</a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+
+      <div class="bar-home">
+        <i class="bi bi-arrow-left-short"></i>
+        <h2 class="home">HOME</h2>
+        <i class="bi bi-arrow-right-short"></i>
+      </div>
+      <div id="app"> 
+              <form class="container d-flex py-5 justify-content-center" id="form">
+                <div>
+                  <input class="form-control shadow" v-on:keyup="filter" v-model="valueSearch" type="search" placeholder="Search" aria-label="Search" id="input-search">
+                </div>
+
+                  <template v-for= "category of checkedFilter">
+                    <div class="col-auto my-2">
+                        <div class="form-check category1 category" id="form-category"> 
+                            <label class="form-check-label d-flex">
+                                <input class="form-check-input mx-1 shadow inputCheck" type="checkbox" :value="category" v-on:change="filter" v-model="checked"> 
+                                {{category}} 
+                            </label>
+                        </div> 
+                    </div>
+                  </template>
+
+              </form>
+
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 mx-3">
+
+                  <template v-if="eventsFilter.length > 0" v-for="evento of eventsFilter">
+                      <div class="card m-4 shadow" style="width: 20rem;">
+                        <img :src="evento.image" class="card-img-top object-fit-cover mt-3 image" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title text-center titulo">{{ evento.name }}</h5>
+                          <p class="card-text text-center">{{ evento.description }}</p>
+                          <p class="card-text text-center fw-bold">Date: {{ evento.date }}</p>
+                          <div class="d-flex justify-content-between mt-5 mb-0">
+                            <p class="fw-bold">Price: $ {{ evento.price }}</p>
+                            <a v-bind:href="'./details.html?_id='+ evento._id" class="btn btn-outline-info shadow">Details</a>
+                          </div>
+                        </div>
+                      </div>
+                  </template>
+
+                  <template v-else>
+                    
+                      <p class="mx-auto text-center p-1 shadow">Search not found</p>
+                    
+                  </template>
+
+              </div>    
+                  
+      </div>
+
+    </main>
+
+     <footer w-100>
+      <a href=""><i class="bi bi-facebook"></i></a>
+      <a href=""><i class="bi-instagram bi-instagram"></i></a>
+      <a href="" id="wasap"><i class="bi-whatsapp bi-whatsapp"></i></a>
+      <a href="./indexNuevo.html"><button id='boton_hola'><h2 class="h2">HOME</h2></button></a>  
+    </footer> 
+
+    <!-- Bootstrap v5.3 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <!-- <script src="./assets/js/data.js"></script> -->
+    <script src="./indexNuevo.js"></script>
+</body>
+</html>
