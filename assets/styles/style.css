@@ -84,6 +84,10 @@ main h2 {
   justify-content: space-evenly;
   
 }
+/* .form{
+  display: flex;
+  flex-direction: column;
+} */
 .form-check{
   display: flex;
    justify-content: space-between;
@@ -140,6 +144,9 @@ h2 {
   font-size: 25px !important;
   padding: 3px 20px 0px 20px;
 }
+.reserv{
+  text-align: center;
+}
 /* desde aqui formulario */
 
 .formulario-contacto {
@@ -171,7 +178,8 @@ h2 {
   justify-content: center;
   padding: 50px 20px 15px 20px;
   align-items: center;
-  margin-bottom: 42px;
+  flex-direction: row-reverse;
+  
 }
 .image-details .card-img-top {
   width: 400px;
@@ -261,6 +269,12 @@ td{
     width: 100% !important;
     margin: 5px;
   }
+  .container{
+    flex-direction: row;
+  }
+  .nav{
+    flex-direction: column;
+  }
 }
 
 /* desde 500px hasta 800px */
@@ -273,6 +287,12 @@ td{
     flex-direction: column;
     width: 80% !important;
     margin: 15px;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .nav{
+    flex-direction: column;
   }
 }
 /* desde 800px hasta 1200px */
