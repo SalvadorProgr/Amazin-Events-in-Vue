@@ -193,6 +193,7 @@ h2 {
 /* desde aqui el table */
 table {
   border: 1px solid black;
+  margin: 15px;
 }
 .table-group-divider {
   border: 1px solid black;
@@ -216,6 +217,9 @@ table {
 }
 .f-contact {
   margin-top: 35px;
+}
+td{
+  padding: 10px;
 }
 /* desde aca las cards dinamicas */
 
@@ -242,7 +246,9 @@ table {
   height: 200px;
   object-fit: cover;
 }
-
+.row {
+  justify-content: center;
+}
 /* RESPONSIVE */
 /* desde 320px hasta 500px */
 @media screen and (max-width: 500px) {
