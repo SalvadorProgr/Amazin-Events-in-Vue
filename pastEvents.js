@@ -5,25 +5,25 @@ let urlApi = "https://mindhub-xj03.onrender.com/api/amazing";
 createApp({
   data() {
     return {
-      events: [],
-      checked: [],
-      valueSearch: '', 
+      events: undefined,
+      categories: undefined,
       eventsFilter: [],
-      checkedFilter: []
-
-     
-
+      valueSearch: '',
+      checked: [],
+      currentDate: ''
     }
   },
   created() {
     fetch(urlApi)
       .then(response => response.json())
       .then(data => {
-        this.events = data.events
-        this.eventsFilter = data.events
-      
-        this.checkedFilter = [...new Set(this.events.map(category => category.category))]
-      }).catch(error => console.log(error))
+        this.currentDate = Date.parse(data.currentDate)
+        this.events = data.events.filter(element => Date.parse(element.date) < this.currentDate)
+        this.eventsFilter = this.events
+        this.categories = [... new Set(this.events.map(event => event.category))]
+        console.log(this.categories)
+      })
+      .catch(err => console.log(err))
   },
   methods: {
     filter() {
@@ -31,7 +31,7 @@ createApp({
         return (this.checked.includes(event.category) || this.checked.length === 0) &&
           event.name.toLowerCase().includes(this.valueSearch.toLowerCase())
       })
-      
+
     }
   }
 

@@ -52,7 +52,7 @@
                   <input class="form-control shadow" v-on:keyup="filter" v-model="valueSearch" type="search" placeholder="Search" aria-label="Search" id="input-search">
                 </div>
 
-                  <template v-for= "category of checkedFilter">
+                  <template v-if="categories" v-for="category of categories">
                     <div class="col-auto my-2">
                         <div class="form-check category1 category" id="form-category"> 
                             <label class="form-check-label d-flex">
@@ -106,6 +106,6 @@
   
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <script src="./upcoming.js"></script>
+    <script src="./upComing.js"></script>
 </body>
 </html>
