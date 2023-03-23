@@ -238,8 +238,8 @@ td{
   
 }
 .card:hover {
-  box-shadow: 20px 12px 14px #d90368;
-  transition: 0.8s;
+  box-shadow: 20px 12px 14px #d90368 !important;
+  transition: 0.5s;
 }
 .card-img-top {
   width: 100%;
