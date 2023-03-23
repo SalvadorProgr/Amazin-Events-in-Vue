@@ -18,7 +18,7 @@ createApp({
       .then(response => response.json())
       .then(data => {
         this.currentDate = Date.parse(data.currentDate)
-        this.events = data.events.filter(element => Date.parse(element.date) < this.currentDate)
+        this.events = data.events.filter(element => Date.parse(element.date) > this.currentDate)
         this.eventsFilter = this.events
         this.categories = [... new Set(this.events.map(event => event.category))]
         console.log(this.categories)
